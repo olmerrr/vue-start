@@ -3,7 +3,7 @@ const app = Vue.createApp({
     return {
       courseGoal: 'Finish the course and lern Vue!',
       vueLink: 'https:google.com',
-      errorMsg: 'Warning!'
+      errorMsg: '<h3>Warning!</h3>'
     };
   },
   methods: {

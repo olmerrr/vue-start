@@ -13,7 +13,7 @@
         <h2>Vue course Goals</h2>
         <p class="text-p">{{courseGoal}}</p>
         <p> <a v-bind:href="vueLink">Link</a></p>
-        <p>{{outputGoal()}}</p>
+        <p v-html="outputGoal()">{{outputGoal()}}</p>
       
       </section>
 <!-- 
