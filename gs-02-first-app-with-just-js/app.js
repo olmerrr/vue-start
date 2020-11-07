@@ -1,29 +1,32 @@
-Vue.createApp({
+const app = Vue.createApp({
   data(){
     return {
-      goals: [],
-      enteredValue: ''
+      courseGoal: 'Finish the course and lern Vue!',
+      vueLink: 'https:google.com'
     };
   },
   methods: {
-    addGoal(){
-      this.goals.push(this.enteredValue);
-      this.enteredValue = "";
+    outputGoal(){
+      const randomNumber = Math.floor(Math.random() * 10);
+      return randomNumber;
+    }
+  } 
+});
+app.mount('#user-goal');
+
+Vue.createApp({
+  data(){
+    return {
+      myName: 'Yaroslav',
+      myAge: 29,
+      myLink: 'http://facebook.com'
+    }
+  },
+  methods: {
+    outputUser(){
+      const randomNumber = Math.floor(Math.random() * 10);
+      if(randomNumber > 5) return 'Vue?'
+      else return 'Great!'
     }
   }
-}).mount('#app')
-
-// const buttonEl = document.querySelector('button');
-// const inputEl = document.querySelector('input');
-// const listEl = document.querySelector('ul');
-
-// function addGoal(){
-//   const enteredValue = inputEl.value;
-//   const listItemEl = document.createElement('li');
-//   listItemEl.textContent = enteredValue;
-//   listEl.appendChild(listItemEl);
-//   inputEl.value = '';
-// }
-
-
-// buttonEl.addEventListener('click', addGoal);
+}).mount('.user')
