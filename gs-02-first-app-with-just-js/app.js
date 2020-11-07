@@ -2,13 +2,14 @@ const app = Vue.createApp({
   data(){
     return {
       courseGoal: 'Finish the course and lern Vue!',
-      vueLink: 'https:google.com'
+      vueLink: 'https:google.com',
+      errorMsg: 'Warning!'
     };
   },
   methods: {
     outputGoal(){
       const randomNumber = Math.floor(Math.random() * 10);
-      return randomNumber;
+      return this.errorMsg;
     }
   } 
 });
