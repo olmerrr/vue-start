@@ -18,15 +18,19 @@ app.mount('#user-goal');
 Vue.createApp({
   data(){
     return {
-      counter: 0
+      counter: 0,
+      name: ''
     }
   },
   methods: {
-    add(){
-      this.counter++
+    setName (event,lastName){
+      this.name = event.target.value
     },
-    del(){
-        this.counter--
+    add(num){
+      this.counter += num 
+    },
+    del(num){
+      this.counter -= num
     },
     
   }
