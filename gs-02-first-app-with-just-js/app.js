@@ -1,5 +1,5 @@
 const app = Vue.createApp({
-  data(){
+  data() {
     return {
       courseGoal: 'Finish the course and lern Vue!',
       vueLink: 'https:google.com',
@@ -7,31 +7,38 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    outputGoal(){
+    outputGoal() {
       const randomNumber = Math.floor(Math.random() * 10);
       return this.errorMsg;
     }
-  } 
+  }
 });
 app.mount('#user-goal');
 
 Vue.createApp({
-  data(){
+  data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      confirmedName: ''
     }
   },
   methods: {
-    setName (event,lastName){
+    setName(event, lastName) {
       this.name = event.target.value
     },
-    add(num){
-      this.counter += num 
+    add(num) {
+      this.counter += num
     },
-    del(num){
+    del(num) {
       this.counter -= num
     },
-    
+    submitForm(e) {
+      // e.preventDefault(); тоже работает
+      alert('Hello')
+    },
+    confirmInput() {
+      this.confirmedName = this.name;
+    },
   }
 }).mount('#events')

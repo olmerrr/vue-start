@@ -23,10 +23,16 @@
       <button v-on:click="add(10)">Add 10</button>
       <button v-on:click="del(5)">Remove 5</button>
       <p>Result: {{counter}}</p>
-      <input type = "text" v-on:input="setName">
-      <div class="form-input">Your name: {{name}}</div>
+      <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput">
+      <div class="form-input">Your name: {{confirmedName}}</div>
+ 
+        <form v-on:submit.prevent="submitForm" class="form-submit">
+          <input type="text" placeholder="Your email">
+          <button>Submited</button>
+        </form>
+
     </section>
-    
+
     <!-- <section class = "user">
         <h2>Admin is: </h2>
         <p class="text-p">{{myName}}</p>
