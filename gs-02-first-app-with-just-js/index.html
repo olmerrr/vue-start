@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Second App</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Second App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <section id="user-goal">
+      <h2>Vue course Goals</h2>
+      <p class="text-p">{{courseGoal}}</p>
+      <p> <a v-bind:href="vueLink">Link</a></p>
+      <p v-html="outputGoal()">{{outputGoal()}}</p>
+    </section>
+
+    <section id="events">
+      <h2>Evvents in Actions</h2>
+      <button v-on:click="add()">Add</button>
+      <button v-on:click="del()">Remove</button>
+      <p>Result: {{counter}}</p>
+    </section>
     
-    <header class="header">
-      <section id = "user-goal">
-        <h2>Vue course Goals</h2>
-        <p class="text-p">{{courseGoal}}</p>
-        <p> <a v-bind:href="vueLink">Link</a></p>
-        <p v-html="outputGoal()">{{outputGoal()}}</p>
-      
-      </section>
-<!-- 
-      <section class = "user">
+    <!-- <section class = "user">
         <h2>Admin is: </h2>
         <p class="text-p">{{myName}}</p>
-        <p>{{myAge}}</p>
+        <p v-html="myAge"></p>
         <p> <a v-bind:href="myLink">Link on facebook</a></p>
         <p>{{outputUser()}}</p>
-      </section> -->
+      </section>  -->
 
 
-    </header>
+  </header>
 
 
-    <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/vue@next"></script>
 
-    <script src="app.js"></script>
-    
-  </body>
+  <script src="app.js"></script>
+
+</body>
+
 </html>

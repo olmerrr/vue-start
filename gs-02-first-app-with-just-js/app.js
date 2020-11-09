@@ -18,16 +18,16 @@ app.mount('#user-goal');
 Vue.createApp({
   data(){
     return {
-      myName: 'Yaroslav',
-      myAge: 29,
-      myLink: 'http://facebook.com'
+      counter: 0
     }
   },
   methods: {
-    outputUser(){
-      const randomNumber = Math.floor(Math.random() * 10);
-      if(randomNumber > 5) return 'Vue?'
-      else return 'Great!'
-    }
+    add(){
+      this.counter++
+    },
+    del(){
+        this.counter--
+    },
+    
   }
-}).mount('.user')
+}).mount('#events')
