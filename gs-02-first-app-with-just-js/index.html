@@ -22,7 +22,9 @@
       <h2>Evvents in Actions</h2>
       <button v-on:click="add(10)">Add 10</button>
       <button v-on:click="del(5)">Remove 5</button>
+      <p v-once>Const Counter: {{counter+10}} </p> 
       <p>Result: {{counter}}</p>
+
       <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput">
       <div class="form-input">Your name: {{confirmedName}}</div>
  
