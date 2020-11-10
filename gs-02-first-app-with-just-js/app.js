@@ -40,5 +40,8 @@ Vue.createApp({
     confirmInput() {
       this.confirmedName = this.name;
     },
+    resetInput() {
+      this.name = '';
+    },
   }
 }).mount('#events')
