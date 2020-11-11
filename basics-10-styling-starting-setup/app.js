@@ -15,6 +15,11 @@ Vue.createApp({
       } else if (box === 'C'){
         this.boxCSelected = true;
       }
+    },
+    refresh(){
+      this.boxASelected = false,
+      this.boxBSelected = false,
+      this.boxCSelected = false
     }
   }
 }).mount('#styling');

@@ -17,8 +17,9 @@
   </header>
   <section id="styling">
     <div class="demo" :style="{borderColor: boxASelected ? 'red' : '#ccc' }" @click="boxSelected('A')"></div>
-    <div class="demo" @click="boxSelected('B')"></div>
-    <div class="demo" @click="boxSelected('C')"></div>
+    <div class="demo" :style="{borderColor: boxBSelected ? 'blue' : '#ccc' }" @click="boxSelected('B')"></div>
+    <div class="demo" :style="{borderColor: boxCSelected ? 'green' : '#ccc' }" @click="boxSelected('C')"></div>
+    <button v-on:click="refresh">Refresh</button>
   </section>
 </body>
 
