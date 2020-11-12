@@ -6,6 +6,23 @@ Vue.createApp({
       boxCSelected: false,
     };
   },
+  computed: {
+    boxAClasses(){
+      return {
+        active: this.boxASelected
+     }
+    },
+    boxBClasses(){
+      return {
+        active: this.boxBSelected
+     }
+    },
+    boxCClasses(){
+      return {
+        active: this.boxCSelected
+     }
+    },
+   },
   methods: {
     boxSelected(box){
       if( box === 'A'){
@@ -21,5 +38,6 @@ Vue.createApp({
       this.boxBSelected = false,
       this.boxCSelected = false
     }
-  }
+  },
+  
 }).mount('#styling');

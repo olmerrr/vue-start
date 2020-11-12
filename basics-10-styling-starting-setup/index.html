@@ -19,9 +19,9 @@
     <!-- можно и так -->
       <!-- <div :class="boxASelected ? 'demo active' : 'demo'"  @click="boxSelected('A')"></div> -->
     <!-- можно и так -->
-    <div :class="{demo: true, active: boxASelected}"  @click="boxSelected('A')"></div>
-    <div :class="{demo: true, active: boxBSelected}"  @click="boxSelected('B')"></div>
-    <div :class="boxCSelected ? 'demo active' : 'demo'" @click="boxSelected('C')"></div>
+    <div class="demo" :class="boxAClasses"  @click="boxSelected('A')"></div>
+    <div class="demo" :class="boxBClasses"  @click="boxSelected('B')"></div>
+    <div class="demo" :class="boxCClasses"  @click="boxSelected('C')"></div>
     <button v-on:click="refresh">Refresh</button>
   </section>
 </body>
