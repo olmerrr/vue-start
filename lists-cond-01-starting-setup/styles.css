@@ -62,6 +62,7 @@ header {
 }
 
 #user-goals button {
+  margin-right: 20px;
   font: inherit;
   cursor: pointer;
   border: 1px solid #ff0077;

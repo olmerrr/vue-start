@@ -20,17 +20,19 @@
 
     <input type="text" v-model="enteredGoalValue" />
     <button @click="addGoal">Add</button>
+    <button @click="removeGoal">Remove</button>
+    
     <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
     <!-- v-show add style display:none  -->
     <!-- <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p> -->
     <!-- v-show add style display:none  -->
     <ul v-else>
-      <li v-for="(goal, id) in goals">{{id}} : {{goal}}</li>
+      <li v-for="(goal, idx) in goals" @click="removeGoal(idx)">{{idx}} : {{goal}}</li>
     </ul>
     <!-- <ul>
       <li v-for="value in user">{{value}}</li>
     </ul> -->
-    
+
     <!-- <ul>
       <li v-for="num in 9">{{num}}</li>
     </ul> -->
