@@ -25,7 +25,7 @@
     <!-- <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p> -->
     <!-- v-show add style display:none  -->
     <ul v-else>
-      <li>{{goals}}</li>
+      <li v-for="goal in goals">{{goal}}</li>
     </ul>
   </section>
 </body>
