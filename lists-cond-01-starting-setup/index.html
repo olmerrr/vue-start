@@ -27,7 +27,8 @@
     <!-- <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p> -->
     <!-- v-show add style display:none  -->
     <ul v-else>
-      <li v-for="(goal, idx) in goals" @click="removeGoal(idx)">{{idx}} : {{goal}}</li>
+      <li v-for="(goal, idx) in goals" @click="removeGoal(idx)" :key="goal">{{idx}} : {{goal}}</li>
+      
     </ul>
     <!-- <ul>
       <li v-for="value in user">{{value}}</li>
