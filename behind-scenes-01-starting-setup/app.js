@@ -1,10 +1,4 @@
 const app = Vue.createApp({
-  template: `
-  <h2>How Vue Works</h2>
-  <input type="text" @input="saveInput">
-  <button @click="setText">Set Text</button>
-  <p>{{ message }}</p>
-  `,
   data() {
     return {
       currentUserInput: '',
@@ -16,7 +10,9 @@ const app = Vue.createApp({
       this.currentUserInput = event.target.value;
     },
     setText() {
-      this.message = this.currentUserInput;
+      // this.message = this.currentUserInput;
+      this.message = this.$refs.userText.value;
+      // console.dir(this.$refs.userText);
     },
   },
 });
